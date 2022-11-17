@@ -33,36 +33,36 @@
             <form action="" method="get">
                 <div class="form-row">
                     <div>
-                        <label for="fname">first name</label>
+                        <label for="fname">first name *</label>
                         <input type="text" name="first-name" id="fname" required>
                         <span></span>
                     </div>
                     <div>
-                        <label for="lname">last Name</label>
+                        <label for="lname">last Name *</label>
                         <input type="text" name="last-name" id="lname" required>
                         <span></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div>
-                        <label for="email">email</label>
-                        <input type="email" name="email" id="email" required>
+                        <label for="email">email *</label>
+                        <input type="email" name="email" id="email" placeholder="someone@something.com" required>
                         <span></span>
                     </div>
                     <div>
                         <label for="tel">phone number</label>
-                        <input type="tel" name="tel" id="tel">
+                        <input type="tel" name="tel" id="tel" placeholder="+54-1111-000000">
                     </div>
                 </div>
                 <div class="form-row">
                     <div>
-                        <label for="pass">password</label>
-                        <input type="password" name="pass" id="pass" required>
+                        <label for="pass">password *</label>
+                        <input type="password" name="pass" id="pass" minlength="8" required>
                         <span></span>
                     </div>
                     <div>
-                        <label for="pass-confirm">confirm password</label>
-                        <input type="password" name="pass-confirm" id="pass-confirm" required>
+                        <label for="pass-confirm">confirm password *</label>
+                        <input type="password" name="pass-confirm" id="pass-confirm" minlength="8" required>
                         <span></span>
                     </div>
                 </div>
@@ -72,7 +72,6 @@
                 </div>
             </form>
         </div>
-     
     </div>
 </body>
 </html>

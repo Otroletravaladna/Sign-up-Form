@@ -183,7 +183,7 @@ input:valid + span::before {
     color: #fff;
 }
 
-input:invalid + span::before {
+.input:invalid + span::before {
     content: "✖";
     color: #fff;
 }
