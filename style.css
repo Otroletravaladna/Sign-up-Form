@@ -2,7 +2,7 @@
 
 :root {
     --font:'Barlow Condensed', sans-serif;
-    --required: #000;
+    --invalid: #000;
 }
 
 body {
@@ -80,7 +80,7 @@ aside > p a {
     flex-direction: column;
     justify-content: center;
 
-    flex: 0 0 35vh;
+    flex: 0 0 30vh;
     width: 80%;
 }
 
@@ -92,6 +92,15 @@ aside > p a {
     width: 100%;
 }
 
+header {
+    width: 80%;
+    align-self: center;
+}
+
+header > h2 {
+    margin-top: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -99,11 +108,13 @@ form {
     align-items: flex-start;
 
     height: 100%;
+    margin-left: 6.5%;
 }
 
 .form-row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    width: 80%;
 }
 
 .form-row > div {
@@ -120,7 +131,7 @@ form {
     flex-direction: column;
     
     flex: 0 0 20vh;
-    width: 100%;
+    width: 80%;
 }
 
 .submit > button {
@@ -129,16 +140,17 @@ form {
     color: #000;
     font-weight: bold;
 
-    margin: 20px 0 0 20px;
+    margin: 20px 0 0 4%;
     font-size: 20px;
     border-radius: 10px;
     border: none;
     flex: 0 0 60px;
     width: 230px;
+    padding: 0;
 }
 
 .submit > p {
-    margin: 30px 0 0 20px;
+    margin: 30px 0 0 4%;
 }
 
 .submit p > a {
@@ -159,11 +171,11 @@ input {
 }
 
 .input:focus:invalid {
-    background: var(--required);
+    background: var(--invalid);
 }
 
 input:focus:valid {
-    background: green;
+    background: rgba(0, 128, 0, .5);
 }
 
 input + span {

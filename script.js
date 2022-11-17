@@ -9,7 +9,7 @@ const submit = document.querySelector("button");
 
 input.forEach((item) => {
     item.addEventListener("focus", () => {
-        invalidColor.style.setProperty("--required", "red");
+        invalidColor.style.setProperty("--invalid", "rgba(255, 0, 0, .4)");
         item.classList.add("input");
     })
 })
@@ -22,3 +22,12 @@ submit.addEventListener("click", () => {
         confirmPass.reportValidity();
     }
 })
+
+confirmPass.addEventListener("focus", () => {
+    pass.reportValidity();
+    if (pass.valid === false) {
+        pass.setCustomValidity("Password must have at least 8 characters");
+    } else if (pass.valid === true) {
+        pass.setCustomValidity("");
+    }
+});
