@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;700&display=swap');
 
+:root {
+    --font:'Barlow Condensed', sans-serif;
+    --required: #000;
+}
+
 body {
     display: flex;
     margin: 0;
 }
 
 aside {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font);
     background: #000 url(images/bground.jpg) no-repeat center;
     background-size: min(800px, 100%);
 
-    width: min(1000px, 50vw);
+    width: 40vw;
     height: 100vh;
     position: relative;
 }
@@ -20,11 +25,22 @@ aside > div {
     background-color: rgba(0, 0, 0, .6);
     align-items: center;
     justify-content: center;
+    
     position: absolute;
-
-    height: min(230px, 30vh);
+    height: min(220px, 15vw);
     width: 100%;
     top: min(200px, 20vh);
+}
+
+aside h1 {
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    
+    font-size: min(100px, 6vw);
 }
 
 aside > p {
@@ -42,22 +58,138 @@ aside > p {
     margin-bottom: 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    
-    font-size: min(100px, 6vw);
-}
-
-a {
+aside > p a {
     color: #fff;
 }
+
+.container {
+    font-family: var(--font);
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: .5px;
+    
+    height: 100vh;
+    flex: 0 0 60vw;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 0 0 35vh;
+    width: 80%;
+}
+
+
+.data {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 65vh;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    height: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-row > div {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+
+    margin-left: 40px;
+}
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    
+    flex: 0 0 20vh;
+    width: 100%;
+}
+
+.submit > button {
+    font-family: var(--font);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    flex: 0 0 60px;
+    width: 230px;
+}
+
+.submit > p {
+    margin: 30px 0 0 20px;
+}
+
+.submit p > a {
+    color: #596d48;
+}
+
+label {
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: #000;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.input:focus:invalid {
+    background: var(--required);
+}
+
+input:focus:valid {
+    background: green;
+}
+
+input + span {
+    position: relative;
+}
+
+input + span::before {
+    position: absolute;
+    color: white;
+    padding: 5px 10px;
+    top: -26px;
+    left: 150px;
+}
+
+input:valid + span::before {
+    content: "✓";
+    color: #fff;
+}
+
+input:invalid + span::before {
+    content: "✖";
+    color: #fff;
+}
+
+
+
+
+
 
